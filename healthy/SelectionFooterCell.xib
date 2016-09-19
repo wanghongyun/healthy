@@ -16,9 +16,6 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcU-UT-hqW">
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="FZO-8d-ZtY"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" title="提交" backgroundImage="blue_button"/>
                     </button>

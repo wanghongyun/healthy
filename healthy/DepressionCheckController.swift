@@ -1,5 +1,5 @@
 //
-//  AnxietyCheckController.swift
+//  DepressionCheckController.swift
 //  healthy
 //
 //  Created by BanDouMacmini-1 on 16/9/19.
@@ -8,27 +8,33 @@
 
 import UIKit
 
-class AnxietyCheckController: BaseController, UITableViewDelegate, UITableViewDataSource {
+class DepressionCheckController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var resultView: UIView!
     
-    private let questions = ["我感到紧张或痛苦",
-                             "我对以往感兴趣的事情还是感兴趣",
-                             "我感到有些害怕，好像预感到有什么可怕的事情要发生",
-                             "我能够哈哈大笑，并看到事务有趣的一面",
-                             "我心中充满烦恼",
-                             "我感到愉快",
-                             "我能够安闲而轻松地坐着",
-                             "我感到人好像变迟钝了",
-                             "我感到一种令人发抖的恐惧",
-                             "我对自己的外表（打扮自己）失去兴趣",
-                             "我有点坐立不安，好像感到非要活动不可",
-                             "我怀着愉快的心情憧憬未来",
-                             "我突然有恐惧感",
-                             "我能欣赏一本好书或一项好的广播或电视节目"]
+    private let questions = ["我觉得经常做的事情并没有困难",
+                             "我对将来抱有希望",
+                             "我觉得不安而平静不下来",
+                             "我的生活过得很有意思",
+                             "我觉得一天之中早晨最好",
+                             "我无缘无故感到疲乏",
+                             "我吃的和平时一样多",
+                             "我觉得做出决定是容易的",
+                             "我晚上睡眠不好",
+                             "我一阵阵地哭出来或是想哭",
+                             "我有便秘的苦恼",
+                             "我发觉我的体重在下降",
+                             "我觉得闷闷不乐，情绪低沉",
+                             "我觉得自己是个有用的人，有人需要我",
+                             "我比平常容易激动",
+                             "我的头脑和平时一样清楚",
+                             "我心跳比平时快",
+                             "平常感兴趣的事我仍然照样感兴趣",
+                             "我认为如果我死了别人会生活的更好些",
+                             "我与异性接触时和以往一样感到愉快"]
     
-    private let selections = ["A.几乎所有时候", "B.大多时候", "C.有时", "D.根本没有"]
+    private let selections = ["A.很少", "B.较少", "C.较多", "D.经常"]
     
     private var answers: [Int: Bool] = [Int: Bool]()
     
@@ -42,22 +48,22 @@ class AnxietyCheckController: BaseController, UITableViewDelegate, UITableViewDa
         self.tableView.register(UINib(nibName: "SelectionCell", bundle: nil), forCellReuseIdentifier: "Cell")
         self.tableView.register(UINib(nibName: "SelectionFooterCell", bundle: nil), forCellReuseIdentifier: "FooterCell")
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     // MARK: - Table
     
@@ -121,9 +127,9 @@ class AnxietyCheckController: BaseController, UITableViewDelegate, UITableViewDa
     @IBAction func closeResult(_ sender: UIButton) {
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
             self.resultView.alpha = 0.0
-            }) { (result) in
-                self.resultView.isHidden = true
+        }) { (result) in
+            self.resultView.isHidden = true
         }
     }
-    
+
 }

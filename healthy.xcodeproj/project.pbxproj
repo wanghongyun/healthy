@@ -25,6 +25,7 @@
 		9693FBED1D9028C50096EE4A /* SelectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9693FBEC1D9028C50096EE4A /* SelectionHeader.xib */; };
 		9693FBF21D902A5C0096EE4A /* SelectionFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693FBF01D902A5C0096EE4A /* SelectionFooterCell.swift */; };
 		9693FBF31D902A5C0096EE4A /* SelectionFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9693FBF11D902A5C0096EE4A /* SelectionFooterCell.xib */; };
+		9693FBF51D9038200096EE4A /* DepressionCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693FBF41D9038200096EE4A /* DepressionCheckController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		9693FBEC1D9028C50096EE4A /* SelectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectionHeader.xib; sourceTree = "<group>"; };
 		9693FBF01D902A5C0096EE4A /* SelectionFooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionFooterCell.swift; sourceTree = "<group>"; };
 		9693FBF11D902A5C0096EE4A /* SelectionFooterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectionFooterCell.xib; sourceTree = "<group>"; };
+		9693FBF41D9038200096EE4A /* DepressionCheckController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepressionCheckController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				968E97021D8FE6BB00DF5E3F /* MoreController.swift */,
 				968E97041D8FFA9000DF5E3F /* RemindController.swift */,
 				9693FBE11D9019F20096EE4A /* AnxietyCheckController.swift */,
+				9693FBF41D9038200096EE4A /* DepressionCheckController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			files = (
 				968E97011D8FD82A00DF5E3F /* CustomDismissAnimationController.swift in Sources */,
 				9693FBF21D902A5C0096EE4A /* SelectionFooterCell.swift in Sources */,
+				9693FBF51D9038200096EE4A /* DepressionCheckController.swift in Sources */,
 				968E96F81D8FA5C700DF5E3F /* GuideController.swift in Sources */,
 				9693FBEB1D9028B60096EE4A /* SelectionHeader.swift in Sources */,
 				9693FBE81D901E0F0096EE4A /* SelectionCell.swift in Sources */,
