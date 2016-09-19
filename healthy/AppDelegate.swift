@@ -15,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "nav_back")
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "nav_back")
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: 0.0, vertical: -64.0), for: .default)
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSFontAttributeName: UIFont.boldSystemFont(ofSize: 16.0),
+            NSForegroundColorAttributeName: UIColor.white,
+            NSShadowAttributeName: NSShadow()
+        ]
         return true
     }
 

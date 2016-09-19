@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		968E96E61D8F994A00DF5E3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E96E51D8F994A00DF5E3F /* AppDelegate.swift */; };
-		968E96E81D8F994A00DF5E3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E96E71D8F994A00DF5E3F /* ViewController.swift */; };
 		968E96EB1D8F994A00DF5E3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968E96E91D8F994A00DF5E3F /* Main.storyboard */; };
 		968E96ED1D8F994A00DF5E3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968E96EC1D8F994A00DF5E3F /* Assets.xcassets */; };
 		968E96F01D8F994A00DF5E3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968E96EE1D8F994A00DF5E3F /* LaunchScreen.storyboard */; };
+		968E96F81D8FA5C700DF5E3F /* GuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E96F71D8FA5C700DF5E3F /* GuideController.swift */; };
+		968E96FB1D8FA5E600DF5E3F /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E96FA1D8FA5E600DF5E3F /* BaseController.swift */; };
+		968E96FD1D8FC9A700DF5E3F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E96FC1D8FC9A700DF5E3F /* LoginController.swift */; };
+		968E97001D8FD82A00DF5E3F /* CustomPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E96FE1D8FD82A00DF5E3F /* CustomPresentAnimationController.swift */; };
+		968E97011D8FD82A00DF5E3F /* CustomDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E96FF1D8FD82A00DF5E3F /* CustomDismissAnimationController.swift */; };
+		968E97031D8FE6BB00DF5E3F /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E97021D8FE6BB00DF5E3F /* MoreController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		968E96E21D8F994A00DF5E3F /* healthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968E96E51D8F994A00DF5E3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		968E96E71D8F994A00DF5E3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		968E96EA1D8F994A00DF5E3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		968E96EC1D8F994A00DF5E3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		968E96EF1D8F994A00DF5E3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		968E96F11D8F994A00DF5E3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		968E96F71D8FA5C700DF5E3F /* GuideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideController.swift; sourceTree = "<group>"; };
+		968E96FA1D8FA5E600DF5E3F /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		968E96FC1D8FC9A700DF5E3F /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		968E96FE1D8FD82A00DF5E3F /* CustomPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentAnimationController.swift; sourceTree = "<group>"; };
+		968E96FF1D8FD82A00DF5E3F /* CustomDismissAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDismissAnimationController.swift; sourceTree = "<group>"; };
+		968E97021D8FE6BB00DF5E3F /* MoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,27 @@
 		968E96E41D8F994A00DF5E3F /* healthy */ = {
 			isa = PBXGroup;
 			children = (
+				968E96F91D8FA5CC00DF5E3F /* ViewController */,
 				968E96E51D8F994A00DF5E3F /* AppDelegate.swift */,
-				968E96E71D8F994A00DF5E3F /* ViewController.swift */,
 				968E96E91D8F994A00DF5E3F /* Main.storyboard */,
 				968E96EC1D8F994A00DF5E3F /* Assets.xcassets */,
 				968E96EE1D8F994A00DF5E3F /* LaunchScreen.storyboard */,
 				968E96F11D8F994A00DF5E3F /* Info.plist */,
 			);
 			path = healthy;
+			sourceTree = "<group>";
+		};
+		968E96F91D8FA5CC00DF5E3F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				968E96FA1D8FA5E600DF5E3F /* BaseController.swift */,
+				968E96F71D8FA5C700DF5E3F /* GuideController.swift */,
+				968E96FC1D8FC9A700DF5E3F /* LoginController.swift */,
+				968E96FE1D8FD82A00DF5E3F /* CustomPresentAnimationController.swift */,
+				968E96FF1D8FD82A00DF5E3F /* CustomDismissAnimationController.swift */,
+				968E97021D8FE6BB00DF5E3F /* MoreController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				968E96E81D8F994A00DF5E3F /* ViewController.swift in Sources */,
+				968E97011D8FD82A00DF5E3F /* CustomDismissAnimationController.swift in Sources */,
+				968E96F81D8FA5C700DF5E3F /* GuideController.swift in Sources */,
+				968E97031D8FE6BB00DF5E3F /* MoreController.swift in Sources */,
+				968E96FD1D8FC9A700DF5E3F /* LoginController.swift in Sources */,
+				968E97001D8FD82A00DF5E3F /* CustomPresentAnimationController.swift in Sources */,
+				968E96FB1D8FA5E600DF5E3F /* BaseController.swift in Sources */,
 				968E96E61D8F994A00DF5E3F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +286,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = healthy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.why.healthy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,7 +300,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = healthy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.why.healthy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
