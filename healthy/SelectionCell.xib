@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="KGk-i7-Jjw" customClass="SelectionCell" customModule="healthy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8N-cH-XOy">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Oxm-wY-Jjo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="selection_off" translatesAutoresizingMaskIntoConstraints="NO" id="OtA-LA-I8u">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="hYl-PB-Sin"/>
+                            <constraint firstAttribute="width" constant="20" id="jLQ-Hd-1ar"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="h8N-cH-XOy" firstAttribute="leading" secondItem="OtA-LA-I8u" secondAttribute="trailing" constant="8" id="0Xh-Nb-DL2"/>
+                    <constraint firstItem="h8N-cH-XOy" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="2BM-aj-sRK"/>
+                    <constraint firstItem="h8N-cH-XOy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DNR-hq-rgD"/>
+                    <constraint firstItem="OtA-LA-I8u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="cNm-uf-kod"/>
+                    <constraint firstItem="OtA-LA-I8u" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zn6-lJ-i4P"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="selectionImage" destination="OtA-LA-I8u" id="hvT-Yc-1Rm"/>
+                <outlet property="selectionLabel" destination="h8N-cH-XOy" id="v2k-hO-1kL"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="selection_off" width="32" height="32"/>
+    </resources>
+</document>

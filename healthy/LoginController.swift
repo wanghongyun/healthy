@@ -43,9 +43,7 @@ class LoginController: BaseController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if let identifier = segue.identifier {
-            if identifier == "tabbar" {
-                
-            } else {
+            if identifier != "tabbar" {
                 self.navigationController?.setNavigationBarHidden(false, animated: false)
             }
         }
