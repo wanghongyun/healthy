@@ -36,13 +36,13 @@ class DepressionCheckController: UIViewController, UITableViewDelegate, UITableV
     
     private let selections = ["A.很少", "B.较少", "C.较多", "D.经常"]
     
-    private var answers: [Int: Bool] = [Int: Bool]()
+    private var answers: [Int: Int] = [Int: Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         for i in 0 ..< self.questions.count {
-            self.answers[i] = false
+            self.answers[i] = -1
         }
         
         self.tableView.register(UINib(nibName: "SelectionCell", bundle: nil), forCellReuseIdentifier: "Cell")
@@ -100,7 +100,7 @@ class DepressionCheckController: UIViewController, UITableViewDelegate, UITableV
         if indexPath.section < self.questions.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! SelectionCell
             cell.selectionLabel.text = self.selections[indexPath.row]
-            cell.isChecked = self.answers[indexPath.section]!
+            cell.isChecked = self.answers[indexPath.section] == indexPath.row
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FooterCell") as! SelectionFooterCell
@@ -111,9 +111,8 @@ class DepressionCheckController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        self.answers[indexPath.section]! = !self.answers[indexPath.section]!
-        let cell = tableView.cellForRow(at: indexPath) as! SelectionCell
-        cell.isChecked = self.answers[indexPath.section]!
+        self.answers[indexPath.section]! = indexPath.row
+        tableView.reloadData()
     }
     
     // MARK: action

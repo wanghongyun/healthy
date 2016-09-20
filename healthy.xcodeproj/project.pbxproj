@@ -141,6 +141,10 @@
 		962866001D90DA6D0034FCCA /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628657B1D90DA6D0034FCCA /* Transformer.swift */; };
 		962866011D90DA6D0034FCCA /* TransformerHorizontalBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628657C1D90DA6D0034FCCA /* TransformerHorizontalBarChart.swift */; };
 		962866021D90DA6D0034FCCA /* ViewPortHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628657D1D90DA6D0034FCCA /* ViewPortHandler.swift */; };
+		962866041D912A7B0034FCCA /* TopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962866031D912A7B0034FCCA /* TopController.swift */; };
+		9628664C1D912C2C0034FCCA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9628664B1D912C2C0034FCCA /* MBProgressHUD.m */; };
+		962866541D9139E50034FCCA /* ReferralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962866531D9139E50034FCCA /* ReferralController.swift */; };
+		9628665A1D913B9C0034FCCA /* SelfCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962866591D913B9C0034FCCA /* SelfCheckController.swift */; };
 		968E96E61D8F994A00DF5E3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E96E51D8F994A00DF5E3F /* AppDelegate.swift */; };
 		968E96EB1D8F994A00DF5E3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968E96E91D8F994A00DF5E3F /* Main.storyboard */; };
 		968E96ED1D8F994A00DF5E3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968E96EC1D8F994A00DF5E3F /* Assets.xcassets */; };
@@ -148,8 +152,6 @@
 		968E96F81D8FA5C700DF5E3F /* GuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E96F71D8FA5C700DF5E3F /* GuideController.swift */; };
 		968E96FB1D8FA5E600DF5E3F /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E96FA1D8FA5E600DF5E3F /* BaseController.swift */; };
 		968E96FD1D8FC9A700DF5E3F /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E96FC1D8FC9A700DF5E3F /* LoginController.swift */; };
-		968E97001D8FD82A00DF5E3F /* CustomPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E96FE1D8FD82A00DF5E3F /* CustomPresentAnimationController.swift */; };
-		968E97011D8FD82A00DF5E3F /* CustomDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E96FF1D8FD82A00DF5E3F /* CustomDismissAnimationController.swift */; };
 		968E97031D8FE6BB00DF5E3F /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E97021D8FE6BB00DF5E3F /* MoreController.swift */; };
 		968E97051D8FFA9000DF5E3F /* RemindController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E97041D8FFA9000DF5E3F /* RemindController.swift */; };
 		9693FBE21D9019F20096EE4A /* AnxietyCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693FBE11D9019F20096EE4A /* AnxietyCheckController.swift */; };
@@ -297,6 +299,12 @@
 		9628657B1D90DA6D0034FCCA /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
 		9628657C1D90DA6D0034FCCA /* TransformerHorizontalBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformerHorizontalBarChart.swift; sourceTree = "<group>"; };
 		9628657D1D90DA6D0034FCCA /* ViewPortHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPortHandler.swift; sourceTree = "<group>"; };
+		962866031D912A7B0034FCCA /* TopController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopController.swift; sourceTree = "<group>"; };
+		9628664A1D912C2C0034FCCA /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		9628664B1D912C2C0034FCCA /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		962866511D912CE50034FCCA /* healthy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "healthy-Bridging-Header.h"; sourceTree = "<group>"; };
+		962866531D9139E50034FCCA /* ReferralController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferralController.swift; sourceTree = "<group>"; };
+		962866591D913B9C0034FCCA /* SelfCheckController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfCheckController.swift; sourceTree = "<group>"; };
 		968E96E21D8F994A00DF5E3F /* healthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968E96E51D8F994A00DF5E3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		968E96EA1D8F994A00DF5E3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -306,8 +314,6 @@
 		968E96F71D8FA5C700DF5E3F /* GuideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuideController.swift; sourceTree = "<group>"; };
 		968E96FA1D8FA5E600DF5E3F /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		968E96FC1D8FC9A700DF5E3F /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		968E96FE1D8FD82A00DF5E3F /* CustomPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentAnimationController.swift; sourceTree = "<group>"; };
-		968E96FF1D8FD82A00DF5E3F /* CustomDismissAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDismissAnimationController.swift; sourceTree = "<group>"; };
 		968E97021D8FE6BB00DF5E3F /* MoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
 		968E97041D8FFA9000DF5E3F /* RemindController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindController.swift; sourceTree = "<group>"; };
 		9693FBE11D9019F20096EE4A /* AnxietyCheckController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnxietyCheckController.swift; sourceTree = "<group>"; };
@@ -599,6 +605,34 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		962866491D912C2C0034FCCA /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9628664A1D912C2C0034FCCA /* MBProgressHUD.h */,
+				9628664B1D912C2C0034FCCA /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		962866551D913B190034FCCA /* Self Check */ = {
+			isa = PBXGroup;
+			children = (
+				9693FBE11D9019F20096EE4A /* AnxietyCheckController.swift */,
+				9693FBF41D9038200096EE4A /* DepressionCheckController.swift */,
+				962866591D913B9C0034FCCA /* SelfCheckController.swift */,
+			);
+			name = "Self Check";
+			sourceTree = "<group>";
+		};
+		962866561D913B300034FCCA /* Remind */ = {
+			isa = PBXGroup;
+			children = (
+				968E97041D8FFA9000DF5E3F /* RemindController.swift */,
+				962866531D9139E50034FCCA /* ReferralController.swift */,
+			);
+			name = Remind;
+			sourceTree = "<group>";
+		};
 		968E96D91D8F994A00DF5E3F = {
 			isa = PBXGroup;
 			children = (
@@ -620,12 +654,14 @@
 			children = (
 				9693FBE31D901CB50096EE4A /* Cell&Header */,
 				968E96F91D8FA5CC00DF5E3F /* ViewController */,
+				962866491D912C2C0034FCCA /* MBProgressHUD */,
 				968E96E51D8F994A00DF5E3F /* AppDelegate.swift */,
 				968E96E91D8F994A00DF5E3F /* Main.storyboard */,
 				968E96EC1D8F994A00DF5E3F /* Assets.xcassets */,
 				962864E31D90D58E0034FCCA /* Frameworks */,
 				968E96EE1D8F994A00DF5E3F /* LaunchScreen.storyboard */,
 				968E96F11D8F994A00DF5E3F /* Info.plist */,
+				962866511D912CE50034FCCA /* healthy-Bridging-Header.h */,
 			);
 			path = healthy;
 			sourceTree = "<group>";
@@ -635,14 +671,12 @@
 			children = (
 				968E96FA1D8FA5E600DF5E3F /* BaseController.swift */,
 				968E96F71D8FA5C700DF5E3F /* GuideController.swift */,
+				962866031D912A7B0034FCCA /* TopController.swift */,
 				968E96FC1D8FC9A700DF5E3F /* LoginController.swift */,
 				962864E61D90D6CA0034FCCA /* ChartController.swift */,
-				968E96FE1D8FD82A00DF5E3F /* CustomPresentAnimationController.swift */,
-				968E96FF1D8FD82A00DF5E3F /* CustomDismissAnimationController.swift */,
 				968E97021D8FE6BB00DF5E3F /* MoreController.swift */,
-				968E97041D8FFA9000DF5E3F /* RemindController.swift */,
-				9693FBE11D9019F20096EE4A /* AnxietyCheckController.swift */,
-				9693FBF41D9038200096EE4A /* DepressionCheckController.swift */,
+				962866561D913B300034FCCA /* Remind */,
+				962866551D913B190034FCCA /* Self Check */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -739,13 +773,13 @@
 				962865DB1D90DA6D0034FCCA /* MoveViewJob.swift in Sources */,
 				9628657E1D90DA6D0034FCCA /* Animator.swift in Sources */,
 				962866001D90DA6D0034FCCA /* Transformer.swift in Sources */,
-				968E97011D8FD82A00DF5E3F /* CustomDismissAnimationController.swift in Sources */,
 				9693FBF21D902A5C0096EE4A /* SelectionFooterCell.swift in Sources */,
 				962865D81D90DA6D0034FCCA /* AnimatedMoveViewJob.swift in Sources */,
 				962865C91D90DA6D0034FCCA /* Highlight.swift in Sources */,
 				962866021D90DA6D0034FCCA /* ViewPortHandler.swift in Sources */,
 				962865911D90DA6D0034FCCA /* Legend.swift in Sources */,
 				962865AF1D90DA6D0034FCCA /* RadarChartData.swift in Sources */,
+				962866541D9139E50034FCCA /* ReferralController.swift in Sources */,
 				9628658B1D90DA6D0034FCCA /* ScatterChartView.swift in Sources */,
 				962865821D90DA6D0034FCCA /* BubbleChartView.swift in Sources */,
 				962865F81D90DA6D0034FCCA /* XAxisRendererRadarChart.swift in Sources */,
@@ -761,6 +795,7 @@
 				962865A01D90DA6D0034FCCA /* CandleChartData.swift in Sources */,
 				968E96F81D8FA5C700DF5E3F /* GuideController.swift in Sources */,
 				9693FBEB1D9028B60096EE4A /* SelectionHeader.swift in Sources */,
+				9628665A1D913B9C0034FCCA /* SelfCheckController.swift in Sources */,
 				9628658D1D90DA6D0034FCCA /* ChartLimitLine.swift in Sources */,
 				9693FBE81D901E0F0096EE4A /* SelectionCell.swift in Sources */,
 				962865F51D90DA6D0034FCCA /* ScatterChartRenderer.swift in Sources */,
@@ -795,6 +830,7 @@
 				962865E61D90DA6D0034FCCA /* LegendRenderer.swift in Sources */,
 				962865CA1D90DA6D0034FCCA /* HorizontalBarHighlighter.swift in Sources */,
 				962865891D90DA6D0034FCCA /* PieRadarChartViewBase.swift in Sources */,
+				9628664C1D912C2C0034FCCA /* MBProgressHUD.m in Sources */,
 				962865B91D90DA6D0034FCCA /* ILineChartDataSet.swift in Sources */,
 				962865C11D90DA6D0034FCCA /* DefaultFillFormatter.swift in Sources */,
 				962865841D90DA6D0034FCCA /* ChartViewBase.swift in Sources */,
@@ -802,7 +838,6 @@
 				962865FA1D90DA6D0034FCCA /* YAxisRendererHorizontalBarChart.swift in Sources */,
 				962865A91D90DA6D0034FCCA /* LineChartDataSet.swift in Sources */,
 				962865EE1D90DA6D0034FCCA /* ChevronUpShapeRenderer.swift in Sources */,
-				968E97001D8FD82A00DF5E3F /* CustomPresentAnimationController.swift in Sources */,
 				962865F71D90DA6D0034FCCA /* XAxisRendererHorizontalBarChart.swift in Sources */,
 				962865DA1D90DA6D0034FCCA /* AnimatedZoomViewJob.swift in Sources */,
 				968E96FB1D8FA5E600DF5E3F /* BaseController.swift in Sources */,
@@ -880,6 +915,7 @@
 				962865E01D90DA6D0034FCCA /* BarLineScatterCandleBubbleRenderer.swift in Sources */,
 				962865CD1D90DA6D0034FCCA /* PieRadarHighlighter.swift in Sources */,
 				962865B31D90DA6D0034FCCA /* ScatterChartDataSet.swift in Sources */,
+				962866041D912A7B0034FCCA /* TopController.swift in Sources */,
 				962865DE1D90DA6D0034FCCA /* AxisRendererBase.swift in Sources */,
 				962865B01D90DA6D0034FCCA /* RadarChartDataEntry.swift in Sources */,
 			);
@@ -1012,6 +1048,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.why.healthy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "healthy/healthy-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1030,6 +1067,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.why.healthy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "healthy/healthy-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

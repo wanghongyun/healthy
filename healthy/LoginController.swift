@@ -9,9 +9,9 @@
 import UIKit
 
 class LoginController: BaseController {
-
-    let customPresentAnimationController = CustomPresentAnimationController()
-    let customDismissAnimationController = CustomDismissAnimationController()
+    
+    @IBOutlet weak var userInput: UITextField!
+    @IBOutlet weak var passInput: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +21,7 @@ class LoginController: BaseController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,26 +29,33 @@ class LoginController: BaseController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if let identifier = segue.identifier {
-            if identifier != "tabbar" {
-                self.navigationController?.setNavigationBarHidden(false, animated: false)
-            }
-        }
-    }
- 
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return customPresentAnimationController
     }
     
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return customDismissAnimationController
+    @IBAction func login(_ sender: UIButton) {
+        if self.userInput.text == "wg" && self.passInput.text == "wg" {
+            self.performSegue(withIdentifier: "LoginToTab", sender: nil)
+        } else {
+            let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+            // Set the annular determinate mode to show task progress.
+            hud.mode = .text
+            hud.label.text = "用户名或密码错误"
+            // Move to bottm center.
+            hud.offset = CGPoint(x: 0.0, y: MBProgressMaxOffset)
+            hud.hide(animated: true, afterDelay: 2.0)
+        }
+    }
+    
+    @IBAction func backgroundTouch(_ sender: UIControl) {
+        self.view.endEditing(true)
+    }
+    
+    @IBAction func eidtDidEnd(_ sender: UITextField) {
+        self.view.endEditing(true)
     }
 }

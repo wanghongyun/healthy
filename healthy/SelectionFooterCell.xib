@@ -20,7 +20,7 @@
                         <state key="normal" title="提交" backgroundImage="blue_button"/>
                     </button>
                 </subviews>
-                <color key="backgroundColor" white="0.95221803160919527" alpha="1" colorSpace="calibratedWhite"/>
+                <color key="backgroundColor" red="0.95294117649999999" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="UcU-UT-hqW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="Rru-Vq-oe0"/>
                     <constraint firstItem="UcU-UT-hqW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="hCR-pl-8Af"/>

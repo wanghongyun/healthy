@@ -12,6 +12,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJS-T7-uxP">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEP-IW-G8g" userLabel="Line">
                     <color key="backgroundColor" white="0.94903017241379306" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -53,20 +56,24 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.95294117647058818" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="1bb-8b-MVE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="7I8-1Z-Uy1"/>
                 <constraint firstItem="SEZ-ot-fOG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="8Rb-TB-Mos"/>
+                <constraint firstAttribute="trailing" secondItem="rJS-T7-uxP" secondAttribute="trailing" constant="16" id="HdI-g6-SZb"/>
                 <constraint firstItem="PEP-IW-G8g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HfC-c7-kSP"/>
                 <constraint firstAttribute="trailing" secondItem="1bb-8b-MVE" secondAttribute="trailing" constant="16" id="JTw-KQ-bqw"/>
+                <constraint firstItem="rJS-T7-uxP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MQe-Xj-xHx"/>
                 <constraint firstAttribute="bottom" secondItem="RjK-8B-Wxq" secondAttribute="bottom" id="PLd-kN-ia4"/>
                 <constraint firstItem="1bb-8b-MVE" firstAttribute="top" secondItem="SEZ-ot-fOG" secondAttribute="bottom" constant="8" id="QPx-5r-Bxg"/>
                 <constraint firstItem="PEP-IW-G8g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VT2-fL-W8z"/>
+                <constraint firstAttribute="bottom" secondItem="rJS-T7-uxP" secondAttribute="bottom" id="Yhs-vG-pK1"/>
                 <constraint firstAttribute="trailing" secondItem="PEP-IW-G8g" secondAttribute="trailing" id="lAi-rZ-sPl"/>
                 <constraint firstAttribute="trailing" secondItem="RjK-8B-Wxq" secondAttribute="trailing" id="nfE-eW-8Ss"/>
                 <constraint firstItem="RjK-8B-Wxq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="p8c-BO-dcn"/>
                 <constraint firstAttribute="bottom" secondItem="1bb-8b-MVE" secondAttribute="bottom" constant="8" id="qCc-F4-Q8p"/>
                 <constraint firstItem="SEZ-ot-fOG" firstAttribute="top" secondItem="PEP-IW-G8g" secondAttribute="bottom" constant="8" id="v1f-Xb-H3V"/>
+                <constraint firstItem="rJS-T7-uxP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="zsJ-Kf-5EV"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

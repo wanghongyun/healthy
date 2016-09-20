@@ -9,9 +9,6 @@
 import UIKit
 
 class GuideController: BaseController, UIScrollViewDelegate {
-
-    let customPresentAnimationController = CustomPresentAnimationController()
-    let customDismissAnimationController = CustomDismissAnimationController()
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -72,13 +69,5 @@ class GuideController: BaseController, UIScrollViewDelegate {
             return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
         }
         
-    }
-    
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return customPresentAnimationController
-    }
-    
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return customDismissAnimationController
     }
 }
