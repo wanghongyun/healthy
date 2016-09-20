@@ -58,7 +58,7 @@ class ChartController: BaseController {
         let lineData = self.createLineData(listData: listData, chartName: "心率")
         self.setupLineChart(lineData: lineData, limitLine: 110.0, maxValue: 150.0, minValue: 40.0)
         
-        let pieData = self.createPieData(listData: listData, range: [60,85,110])
+        let pieData = self.createPieData(listData: listData, range: [60,85,110], label: "心率")
         self.setupPieChart(pieData: pieData, label: "心率")
     }
     
@@ -67,7 +67,7 @@ class ChartController: BaseController {
         let lineData = self.createLineData(listData: listData, chartName: "舒张压")
         self.setupLineChart(lineData: lineData, limitLine: 90.0, maxValue: 110.0, minValue: 50.0)
         
-        let pieData = self.createPieData(listData: listData, range:  [60,85,100])
+        let pieData = self.createPieData(listData: listData, range:  [60,85,100], label: "舒张压")
         self.setupPieChart(pieData: pieData, label: "舒张压")
     }
     
@@ -76,7 +76,7 @@ class ChartController: BaseController {
         let lineData = self.createLineData(listData: listData, chartName: "收缩压")
         self.setupLineChart(lineData: lineData, limitLine: 140.0, maxValue: 190.0, minValue: 90.0)
 
-        let pieData = self.createPieData(listData: listData, range: [90,110,140])
+        let pieData = self.createPieData(listData: listData, range: [90,110,140], label: "收缩压")
         self.setupPieChart(pieData: pieData, label: "收缩压")
     }
     
@@ -150,13 +150,13 @@ class ChartController: BaseController {
         self.pieChart.data = pieData
         
         let mLegend = pieChart.legend
-        mLegend.horizontalAlignment = .right
+        mLegend.horizontalAlignment = .left
         mLegend.verticalAlignment = .top
         
         self.pieChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5)
     }
     
-    func createPieData(listData: [Int], range: [Int]) -> PieChartData {
+    func createPieData(listData: [Int], range: [Int], label: String) -> PieChartData {
         let total = listData.count
         
         var qu1 = 0
@@ -177,10 +177,10 @@ class ChartController: BaseController {
         }
         
         var yValues = [ChartDataEntry]()
-        yValues.append(ChartDataEntry(x: 0.0, y: Double(qu1)/Double(total)))
-        yValues.append(ChartDataEntry(x: 1.0, y: Double(qu2)/Double(total)))
-        yValues.append(ChartDataEntry(x: 2.0, y: Double(qu3)/Double(total)))
-        yValues.append(ChartDataEntry(x: 3.0, y: Double(qu4)/Double(total)))
+        yValues.append(PieChartDataEntry(value: Double(qu1)/Double(total), label: "\(range[0])以下"))
+        yValues.append(PieChartDataEntry(value: Double(qu2)/Double(total), label: "\(range[0])~\(range[1])"))
+        yValues.append(PieChartDataEntry(value: Double(qu3)/Double(total), label: "\(range[1])~\(range[2])"))
+        yValues.append(PieChartDataEntry(value: Double(qu4)/Double(total), label: "\(range[2])以上"))
         
         let pieDataSet = PieChartDataSet(values: yValues, label: nil)
         pieDataSet.sliceSpace = 0.0
