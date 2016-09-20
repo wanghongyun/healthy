@@ -322,7 +322,7 @@
         <!--体征数据-->
         <scene sceneID="9wX-Id-sfm">
             <objects>
-                <viewController id="32Y-gM-cBx" sceneMemberID="viewController">
+                <viewController id="32Y-gM-cBx" customClass="ChartController" customModule="healthy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rMe-wc-qmZ"/>
                         <viewControllerLayoutGuide type="bottom" id="Vcd-i6-XHR"/>
@@ -330,13 +330,145 @@
                     <view key="view" contentMode="scaleToFill" id="I10-qq-hcr">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxb-rg-Nju">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJt-qW-MGT">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8D-w9-4pH">
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="心率">
+                                                    <color key="titleColor" red="0.17786271870000001" green="0.64855293420000004" blue="0.81891746219999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="selected" title="心率">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted" title="心率">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="heartRateClick:" destination="32Y-gM-cBx" eventType="touchUpInside" id="gFz-Jx-jzY"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A3U-yH-Uvc" userLabel="line">
+                                                <color key="backgroundColor" white="0.90408584770114941" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="JJD-wV-9Hs"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8l-hq-V2K">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="GbJ-Uy-Ymx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="舒张压">
+                                                    <color key="titleColor" red="0.17786271870000001" green="0.64855293420000004" blue="0.81891746219999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="selected" title="舒张压">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted" title="舒张压">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="diastolicClick:" destination="32Y-gM-cBx" eventType="touchUpInside" id="7EU-Pw-BzL"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GoV-4y-S7b" userLabel="line">
+                                                <color key="backgroundColor" white="0.9040858477" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="kgL-Iq-4J9"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8b-N1-Y4b">
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <state key="normal" title="收缩压">
+                                                    <color key="titleColor" red="0.17786271870000001" green="0.64855293420000004" blue="0.81891746219999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <state key="selected" title="收缩压">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted" title="收缩压">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="systolicClick:" destination="32Y-gM-cBx" eventType="touchUpInside" id="zc6-Ks-Xlf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="GoV-4y-S7b" firstAttribute="top" secondItem="PJt-qW-MGT" secondAttribute="top" id="2JF-zf-VSh"/>
+                                            <constraint firstAttribute="bottom" secondItem="A3U-yH-Uvc" secondAttribute="bottom" id="4nR-UX-Gbe"/>
+                                            <constraint firstAttribute="height" constant="30" id="Ab4-uO-Ir8"/>
+                                            <constraint firstAttribute="bottom" secondItem="GoV-4y-S7b" secondAttribute="bottom" id="EEf-Kp-TbH"/>
+                                            <constraint firstAttribute="bottom" secondItem="O8D-w9-4pH" secondAttribute="bottom" id="IXo-aX-VNG"/>
+                                            <constraint firstAttribute="bottom" secondItem="L8b-N1-Y4b" secondAttribute="bottom" id="J8t-ue-JVh"/>
+                                            <constraint firstItem="L8b-N1-Y4b" firstAttribute="top" secondItem="PJt-qW-MGT" secondAttribute="top" id="LJ6-iT-gSh"/>
+                                            <constraint firstItem="I8l-hq-V2K" firstAttribute="top" secondItem="PJt-qW-MGT" secondAttribute="top" id="Lal-H4-FfD"/>
+                                            <constraint firstItem="A3U-yH-Uvc" firstAttribute="top" secondItem="PJt-qW-MGT" secondAttribute="top" id="Nnp-YW-gjg"/>
+                                            <constraint firstItem="L8b-N1-Y4b" firstAttribute="leading" secondItem="I8l-hq-V2K" secondAttribute="trailing" id="Vhu-Hy-gSI"/>
+                                            <constraint firstItem="I8l-hq-V2K" firstAttribute="centerX" secondItem="PJt-qW-MGT" secondAttribute="centerX" id="WVK-OO-G4d"/>
+                                            <constraint firstItem="I8l-hq-V2K" firstAttribute="width" secondItem="O8D-w9-4pH" secondAttribute="width" id="Z70-bE-Edq"/>
+                                            <constraint firstAttribute="bottom" secondItem="I8l-hq-V2K" secondAttribute="bottom" id="aUh-Tx-kc0"/>
+                                            <constraint firstItem="L8b-N1-Y4b" firstAttribute="width" secondItem="I8l-hq-V2K" secondAttribute="width" id="hvh-gq-HnE"/>
+                                            <constraint firstItem="O8D-w9-4pH" firstAttribute="top" secondItem="PJt-qW-MGT" secondAttribute="top" id="jIZ-u5-MGo"/>
+                                            <constraint firstAttribute="width" constant="240" id="lYI-qT-Jfb"/>
+                                            <constraint firstItem="A3U-yH-Uvc" firstAttribute="trailing" secondItem="O8D-w9-4pH" secondAttribute="trailing" id="wO7-Fk-R46"/>
+                                            <constraint firstItem="I8l-hq-V2K" firstAttribute="leading" secondItem="O8D-w9-4pH" secondAttribute="trailing" id="zaN-HI-g6C"/>
+                                            <constraint firstItem="L8b-N1-Y4b" firstAttribute="leading" secondItem="GoV-4y-S7b" secondAttribute="leading" id="zf8-F0-xbg"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0XL-WI-gu6"/>
+                                    <constraint firstItem="PJt-qW-MGT" firstAttribute="top" secondItem="jxb-rg-Nju" secondAttribute="top" constant="5" id="Nie-Zp-RrQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="PJt-qW-MGT" secondAttribute="bottom" constant="5" id="rd2-oi-Xef"/>
+                                    <constraint firstItem="PJt-qW-MGT" firstAttribute="centerX" secondItem="jxb-rg-Nju" secondAttribute="centerX" id="ws1-H0-SpV"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lt-Jw-Scr" customClass="LineChartView" customModule="healthy" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1AJ-IF-Ch6" customClass="PieChartView" customModule="healthy" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jxb-rg-Nju" secondAttribute="trailing" id="194-SO-cLF"/>
+                            <constraint firstAttribute="trailing" secondItem="2lt-Jw-Scr" secondAttribute="trailing" id="5T3-Ez-Jui"/>
+                            <constraint firstItem="1AJ-IF-Ch6" firstAttribute="leading" secondItem="I10-qq-hcr" secondAttribute="leading" id="JQZ-fF-fa9"/>
+                            <constraint firstItem="2lt-Jw-Scr" firstAttribute="leading" secondItem="I10-qq-hcr" secondAttribute="leading" id="Ll0-Me-06T"/>
+                            <constraint firstItem="2lt-Jw-Scr" firstAttribute="top" secondItem="jxb-rg-Nju" secondAttribute="bottom" constant="8" id="Qe6-VJ-HIV"/>
+                            <constraint firstItem="jxb-rg-Nju" firstAttribute="leading" secondItem="I10-qq-hcr" secondAttribute="leading" id="TJV-Wd-GYy"/>
+                            <constraint firstItem="jxb-rg-Nju" firstAttribute="top" secondItem="rMe-wc-qmZ" secondAttribute="bottom" constant="8" id="hED-v0-e0F"/>
+                            <constraint firstAttribute="trailing" secondItem="1AJ-IF-Ch6" secondAttribute="trailing" id="mF3-er-I0R"/>
+                            <constraint firstItem="1AJ-IF-Ch6" firstAttribute="top" secondItem="2lt-Jw-Scr" secondAttribute="bottom" constant="8" id="mp4-30-W80"/>
+                            <constraint firstItem="1AJ-IF-Ch6" firstAttribute="top" secondItem="2lt-Jw-Scr" secondAttribute="bottom" constant="8" id="rGQ-hq-tDf"/>
+                            <constraint firstItem="Vcd-i6-XHR" firstAttribute="top" secondItem="1AJ-IF-Ch6" secondAttribute="bottom" constant="8" id="sEX-vu-I53"/>
+                            <constraint firstItem="1AJ-IF-Ch6" firstAttribute="height" secondItem="2lt-Jw-Scr" secondAttribute="height" id="vpp-uO-fdl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="体征数据" id="7v9-Ok-a0L"/>
+                    <connections>
+                        <outlet property="filterContainer" destination="PJt-qW-MGT" id="zKv-P6-aMb"/>
+                        <outlet property="lineChart" destination="2lt-Jw-Scr" id="PPU-5a-Icg"/>
+                        <outlet property="pieChart" destination="1AJ-IF-Ch6" id="yh4-xj-jPs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWT-OI-iGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2110" y="2401"/>
+            <point key="canvasLocation" x="2109.5999999999999" y="2400.4497751124441"/>
         </scene>
         <!--小秘书-->
         <scene sceneID="iM3-dW-CHg">
