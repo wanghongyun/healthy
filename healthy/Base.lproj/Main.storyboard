@@ -571,7 +571,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWT-OI-iGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="2498"/>
+            <point key="canvasLocation" x="862" y="2012"/>
         </scene>
         <!--复诊-->
         <scene sceneID="XmN-CB-WSM">
@@ -622,7 +622,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gy-da-6fu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1584.8" y="2938.3808095952027"/>
+            <point key="canvasLocation" x="2110" y="2498"/>
         </scene>
         <!--小秘书-->
         <scene sceneID="iM3-dW-CHg">
@@ -660,6 +660,9 @@
                                         <state key="highlighted" title="前一天">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="previousDay:" destination="xP7-4p-08d" eventType="touchUpInside" id="BIp-dQ-b9c"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cem-Yf-R8G">
                                         <color key="backgroundColor" red="0.61960784313725492" green="0.8784313725490196" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
@@ -674,6 +677,9 @@
                                         <state key="highlighted" title="后一天">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="nextDay:" destination="xP7-4p-08d" eventType="touchUpInside" id="wv0-JL-7wd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.88627450980392153" green="0.94901960784313721" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
@@ -717,6 +723,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="添加提醒" backgroundImage="blue_button"/>
+                                                <connections>
+                                                    <action selector="add:" destination="xP7-4p-08d" eventType="touchUpInside" id="dZJ-Md-qu2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -758,12 +767,13 @@
                     <navigationItem key="navigationItem" title="小秘书" id="tD6-a6-B38"/>
                     <connections>
                         <outlet property="dateLabel" destination="cjY-u3-Vmd" id="K5f-tL-Z4m"/>
+                        <outlet property="emptyView" destination="0uU-UZ-TdF" id="4RR-Wn-Cph"/>
                         <segue destination="uwA-lQ-hPF" kind="show" identifier="Referral" id="G01-1V-GAb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hqi-gq-9QH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2442" y="3144"/>
+            <point key="canvasLocation" x="2860" y="3123"/>
         </scene>
         <!--小秘书-->
         <scene sceneID="5dQ-KH-baj">
@@ -946,7 +956,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KL5-zl-od6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2984.8000000000002" y="4155.472263868066"/>
+            <point key="canvasLocation" x="3593" y="4155"/>
         </scene>
         <!--抑郁-->
         <scene sceneID="nR1-kc-bO7">
@@ -1109,7 +1119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRC-yD-rms" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3791" y="4155"/>
+            <point key="canvasLocation" x="4422" y="4155"/>
         </scene>
         <!--疾病风险评估-->
         <scene sceneID="5Jc-JK-zIx">
@@ -1565,7 +1575,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EX4-4F-E8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5102" y="2925"/>
+            <point key="canvasLocation" x="4422" y="2498"/>
         </scene>
         <!--房颤-->
         <scene sceneID="wKN-av-u5F">
@@ -1730,7 +1740,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ba-An-s7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5103" y="3628"/>
+            <point key="canvasLocation" x="4422" y="3347"/>
         </scene>
         <!--风险自查-->
         <scene sceneID="Q8Y-bL-YMV">
@@ -1937,7 +1947,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSQ-Kw-h1n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4421.6000000000004" y="2406.7466266866568"/>
+            <point key="canvasLocation" x="5369" y="2012"/>
         </scene>
         <!--更多内容-->
         <scene sceneID="hS6-lg-O8s">
