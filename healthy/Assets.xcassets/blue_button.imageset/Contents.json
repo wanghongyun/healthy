@@ -5,22 +5,8 @@
       "scale" : "1x"
     },
     {
-      "resizing" : {
-        "mode" : "9-part",
-        "center" : {
-          "mode" : "tile",
-          "width" : 1,
-          "height" : 1
-        },
-        "cap-insets" : {
-          "bottom" : 30,
-          "top" : 29,
-          "right" : 25,
-          "left" : 24
-        }
-      },
       "idiom" : "universal",
-      "filename" : "current_day_bgc-1.png",
+      "filename" : "green_bean.png",
       "scale" : "2x"
     },
     {

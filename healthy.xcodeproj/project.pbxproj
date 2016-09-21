@@ -162,6 +162,8 @@
 		9693FBF21D902A5C0096EE4A /* SelectionFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693FBF01D902A5C0096EE4A /* SelectionFooterCell.swift */; };
 		9693FBF31D902A5C0096EE4A /* SelectionFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9693FBF11D902A5C0096EE4A /* SelectionFooterCell.xib */; };
 		9693FBF51D9038200096EE4A /* DepressionCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693FBF41D9038200096EE4A /* DepressionCheckController.swift */; };
+		96EA875F1D92620200D5B24A /* ReferralCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EA875D1D92620200D5B24A /* ReferralCell.swift */; };
+		96EA87601D92620200D5B24A /* ReferralCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96EA875E1D92620200D5B24A /* ReferralCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -324,6 +326,8 @@
 		9693FBF01D902A5C0096EE4A /* SelectionFooterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionFooterCell.swift; sourceTree = "<group>"; };
 		9693FBF11D902A5C0096EE4A /* SelectionFooterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectionFooterCell.xib; sourceTree = "<group>"; };
 		9693FBF41D9038200096EE4A /* DepressionCheckController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepressionCheckController.swift; sourceTree = "<group>"; };
+		96EA875D1D92620200D5B24A /* ReferralCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferralCell.swift; sourceTree = "<group>"; };
+		96EA875E1D92620200D5B24A /* ReferralCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReferralCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,7 +344,6 @@
 		962864E31D90D58E0034FCCA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				962864E91D90DA6D0034FCCA /* Charts */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -654,12 +657,12 @@
 			children = (
 				9693FBE31D901CB50096EE4A /* Cell&Header */,
 				968E96F91D8FA5CC00DF5E3F /* ViewController */,
-				962866491D912C2C0034FCCA /* MBProgressHUD */,
+				96EA875C1D9218A600D5B24A /* Thrid party */,
 				968E96E51D8F994A00DF5E3F /* AppDelegate.swift */,
 				968E96E91D8F994A00DF5E3F /* Main.storyboard */,
+				968E96EE1D8F994A00DF5E3F /* LaunchScreen.storyboard */,
 				968E96EC1D8F994A00DF5E3F /* Assets.xcassets */,
 				962864E31D90D58E0034FCCA /* Frameworks */,
-				968E96EE1D8F994A00DF5E3F /* LaunchScreen.storyboard */,
 				968E96F11D8F994A00DF5E3F /* Info.plist */,
 				962866511D912CE50034FCCA /* healthy-Bridging-Header.h */,
 			);
@@ -690,8 +693,19 @@
 				9693FBEC1D9028C50096EE4A /* SelectionHeader.xib */,
 				9693FBF01D902A5C0096EE4A /* SelectionFooterCell.swift */,
 				9693FBF11D902A5C0096EE4A /* SelectionFooterCell.xib */,
+				96EA875D1D92620200D5B24A /* ReferralCell.swift */,
+				96EA875E1D92620200D5B24A /* ReferralCell.xib */,
 			);
 			name = "Cell&Header";
+			sourceTree = "<group>";
+		};
+		96EA875C1D9218A600D5B24A /* Thrid party */ = {
+			isa = PBXGroup;
+			children = (
+				962866491D912C2C0034FCCA /* MBProgressHUD */,
+				962864E91D90DA6D0034FCCA /* Charts */,
+			);
+			name = "Thrid party";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -754,6 +768,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9693FBE91D901E0F0096EE4A /* SelectionCell.xib in Resources */,
+				96EA87601D92620200D5B24A /* ReferralCell.xib in Resources */,
 				968E96F01D8F994A00DF5E3F /* LaunchScreen.storyboard in Resources */,
 				968E96ED1D8F994A00DF5E3F /* Assets.xcassets in Resources */,
 				968E96EB1D8F994A00DF5E3F /* Main.storyboard in Resources */,
@@ -815,6 +830,7 @@
 				962865E91D90DA6D0034FCCA /* LineScatterCandleRadarRenderer.swift in Sources */,
 				962865A21D90DA6D0034FCCA /* CandleChartDataSet.swift in Sources */,
 				962865D71D90DA6D0034FCCA /* ScatterChartDataProvider.swift in Sources */,
+				96EA875F1D92620200D5B24A /* ReferralCell.swift in Sources */,
 				9628658F1D90DA6D0034FCCA /* Description.swift in Sources */,
 				962865D61D90DA6D0034FCCA /* LineChartDataProvider.swift in Sources */,
 				9628659A1D90DA6D0034FCCA /* BarChartDataSet.swift in Sources */,

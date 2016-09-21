@@ -41,13 +41,7 @@ class LoginController: BaseController {
         if self.userInput.text == "wg" && self.passInput.text == "wg" {
             self.performSegue(withIdentifier: "LoginToTab", sender: nil)
         } else {
-            let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-            // Set the annular determinate mode to show task progress.
-            hud.mode = .text
-            hud.label.text = "用户名或密码错误"
-            // Move to bottm center.
-            hud.offset = CGPoint(x: 0.0, y: MBProgressMaxOffset)
-            hud.hide(animated: true, afterDelay: 2.0)
+            self.showToast("用户名或密码错误")
         }
     }
     

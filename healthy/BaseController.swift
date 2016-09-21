@@ -31,5 +31,14 @@ class BaseController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func showToast(_ toast: String) {
+        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        // Set the annular determinate mode to show task progress.
+        hud.mode = .text
+        hud.label.text = toast
+        // Move to bottm center.
+//        hud.offset = CGPoint(x: 0.0, y: MBProgressMaxOffset)
+        hud.hide(animated: true, afterDelay: 2.0)
+    }
 }

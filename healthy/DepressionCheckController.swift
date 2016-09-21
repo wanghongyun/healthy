@@ -85,6 +85,10 @@ class DepressionCheckController: UIViewController, UITableViewDelegate, UITableV
         return 0.0
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44.0
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section < self.questions.count {
             if let header = Bundle.main.loadNibNamed("SelectionHeader", owner: nil, options: nil)?[0] as? SelectionHeader {
