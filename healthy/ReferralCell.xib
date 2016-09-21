@@ -41,7 +41,6 @@
                             <constraint firstAttribute="height" constant="16" id="Qo1-CQ-KoX"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="0.14901960780000001" green="0.65098039220000004" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WPo-bT-Y8p">
@@ -85,7 +84,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_referral" width="25" height="25"/>
+        <image name="ic_referral" width="37" height="37"/>
         <image name="ic_time" width="12" height="12"/>
     </resources>
 </document>
