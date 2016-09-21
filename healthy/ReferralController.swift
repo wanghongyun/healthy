@@ -166,6 +166,9 @@ class ReferralController: BaseController, UITextViewDelegate {
         
         if save.synchronize() {
             self.showToast("保存成功")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                _ = self.navigationController?.popViewController(animated: true)
+            }
         } else {
             self.showToast("保存失败")
         }
