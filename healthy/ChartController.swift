@@ -293,7 +293,7 @@ class ChartController: BaseController {
             }
         }
         
-        var pieValues = [ChartDataEntry]()
+        var pieValues = [PieChartDataEntry]()
         pieValues.append(PieChartDataEntry(value: Double(qu1)/Double(total), label: "\(range[0])以下"))
         pieValues.append(PieChartDataEntry(value: Double(qu2)/Double(total), label: "\(range[0])~\(range[1])"))
         pieValues.append(PieChartDataEntry(value: Double(qu3)/Double(total), label: "\(range[1])~\(range[2])"))
@@ -323,7 +323,6 @@ class ChartController: BaseController {
         formatter.percentSymbol = "%"
         let chartData = PieChartData(dataSets: [pieDataSet])
         chartData.setValueFormatter(DefaultValueFormatter(formatter: formatter))
-        
         return chartData
     }
     
