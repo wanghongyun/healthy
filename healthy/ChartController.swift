@@ -33,6 +33,8 @@ class ChartController: BaseController {
         add.addTarget(self, action: #selector(self.add(_:)), for: .touchUpInside)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: add)
         
+        self.setupData()
+        
         self.heartRate()
     }
 
@@ -87,19 +89,25 @@ class ChartController: BaseController {
         
         let confirmAction = UIAlertAction(title: "确定", style: .default) { (action) in
             if let text = self.textField.text, let data = Int(text) {
+                let save = UserDefaults.standard
+                
                 switch self.selected {
                 case 0:
                     self.rateList.append(data)
+                    save.setValue(self.rateList, forKey: "heart_rate")
                     self.heartRate()
                 case 1:
                     self.diastolicList.append(data)
+                    save.setValue(self.diastolicList, forKey: "diastolic")
                     self.diastolic()
                 case 2:
+                    save.setValue(self.systolicList, forKey: "systolic")
                     self.systolicList.append(data)
                     self.systolic()
                 default:
                     break
                 }
+                save.synchronize()
             }
         }
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
@@ -127,10 +135,32 @@ class ChartController: BaseController {
     }
     
     // MARK: data
-    func heartRate() {
-        if self.rateList.count == 0 {
+    func setupData() {
+        let save = UserDefaults.standard
+        if let rate =  save.value(forKey: "heart_rate") as? [Int] {
+            self.rateList = rate
+        } else {
             self.rateList = self.demoData(range: 65, offset: 50)
+            save.setValue(self.rateList, forKey: "heart_rate")
         }
+        
+        if let diastolic = save.value(forKey: "diastolic") as? [Int] {
+            self.diastolicList = diastolic
+        } else {
+            self.diastolicList = self.demoData(range: 50, offset: 55)
+            save.setValue(self.diastolicList, forKey: "diastolic")
+        }
+        
+        if let systolic = save.value(forKey: "systolic") as? [Int] {
+            self.systolicList = systolic
+        } else {
+            self.systolicList = self.demoData(range: 70, offset: 80)
+            save.setValue(self.systolicList, forKey: "systolic")
+        }
+        save.synchronize()
+    }
+    
+    func heartRate() {
         let lineData = self.createLineData(listData: self.rateList, chartName: "心率")
         self.setupLineChart(lineData: lineData, limitLine: 110.0, maxValue: 150.0, minValue: 40.0)
         
@@ -139,9 +169,6 @@ class ChartController: BaseController {
     }
     
     func diastolic() {
-        if self.diastolicList.count == 0 {
-            self.diastolicList = self.demoData(range: 50, offset: 55)
-        }
         let lineData = self.createLineData(listData: self.diastolicList, chartName: "舒张压")
         self.setupLineChart(lineData: lineData, limitLine: 90.0, maxValue: 110.0, minValue: 50.0)
         
@@ -150,9 +177,6 @@ class ChartController: BaseController {
     }
     
     func systolic() {
-        if self.systolicList.count == 0 {
-            self.systolicList = self.demoData(range: 70, offset: 80)
-        }
         let lineData = self.createLineData(listData: self.systolicList, chartName: "收缩压")
         self.setupLineChart(lineData: lineData, limitLine: 140.0, maxValue: 190.0, minValue: 70.0)
 
