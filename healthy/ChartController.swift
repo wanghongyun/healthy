@@ -13,12 +13,25 @@ class ChartController: BaseController {
     @IBOutlet weak var lineChart: LineChartView!
     @IBOutlet weak var pieChart: PieChartView!
     @IBOutlet weak var filterContainer: UIView!
+    var textField: UITextField!
+    
+    private var rateList = [Int]()
+    private var diastolicList = [Int]()
+    private var systolicList = [Int]()
+    
+    private var selected = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.filterContainer.layer.borderWidth = 1.0
         self.filterContainer.layer.borderColor = UIColor(white: 0.9, alpha: 1.0).cgColor
+        
+        let add = UIButton(type: .custom)
+        add.frame = CGRect(x: 0.0, y: 0.0, width: 36.0, height: 44.0)
+        add.setImage(UIImage(named: "nav_add"), for: .normal)
+        add.addTarget(self, action: #selector(self.add(_:)), for: .touchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: add)
         
         self.heartRate()
     }
@@ -42,41 +55,108 @@ class ChartController: BaseController {
     // MARK: action
     @IBAction func heartRateClick(_ sender: UIButton) {
         self.heartRate()
+        self.selected = sender.tag
     }
     
     @IBAction func diastolicClick(_ sender: UIButton) {
         self.diastolic()
+        self.selected = sender.tag
     }
     
     @IBAction func systolicClick(_ sender: UIButton) {
         self.systolic()
+        self.selected = sender.tag
+    }
+    
+    func add(_ sender: UIButton) {
+        var title = ""
+        switch self.selected {
+        case 0:
+            title = "心率"
+        case 1:
+            title = "舒张压"
+        case 2:
+            title = "收缩压"
+        default:
+            title = ""
+        }
+        
+        let alertController = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        
+        alertController.addTextField(configurationHandler: self.addTextField)
+        
+        let confirmAction = UIAlertAction(title: "确定", style: .default) { (action) in
+            if let text = self.textField.text, let data = Int(text) {
+                switch self.selected {
+                case 0:
+                    self.rateList.append(data)
+                    self.heartRate()
+                case 1:
+                    self.diastolicList.append(data)
+                    self.diastolic()
+                case 2:
+                    self.systolicList.append(data)
+                    self.systolic()
+                default:
+                    break
+                }
+            }
+        }
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func addTextField(textField: UITextField!){
+        // add the text field and make the result global
+        var title = ""
+        switch self.selected {
+        case 0:
+            title = "心率"
+        case 1:
+            title = "舒张压"
+        case 2:
+            title = "收缩压"
+        default:
+            title = "数据"
+        }
+        textField.placeholder = "请输入\(title)"
+        self.textField = textField
+        self.textField.keyboardType = .numberPad
     }
     
     // MARK: data
     func heartRate() {
-        let listData = self.demoData(range: 65, offset: 50)
-        let lineData = self.createLineData(listData: listData, chartName: "心率")
+        if self.rateList.count == 0 {
+            self.rateList = self.demoData(range: 65, offset: 50)
+        }
+        let lineData = self.createLineData(listData: self.rateList, chartName: "心率")
         self.setupLineChart(lineData: lineData, limitLine: 110.0, maxValue: 150.0, minValue: 40.0)
         
-        let pieData = self.createPieData(listData: listData, range: [60,85,110], label: "心率")
+        let pieData = self.createPieData(listData: self.rateList, range: [60,85,110], label: "心率")
         self.setupPieChart(pieData: pieData, label: "心率")
     }
     
     func diastolic() {
-        let listData = self.demoData(range: 50, offset: 55)
-        let lineData = self.createLineData(listData: listData, chartName: "舒张压")
+        if self.diastolicList.count == 0 {
+            self.diastolicList = self.demoData(range: 50, offset: 55)
+        }
+        let lineData = self.createLineData(listData: self.diastolicList, chartName: "舒张压")
         self.setupLineChart(lineData: lineData, limitLine: 90.0, maxValue: 110.0, minValue: 50.0)
         
-        let pieData = self.createPieData(listData: listData, range:  [60,85,100], label: "舒张压")
+        let pieData = self.createPieData(listData: self.diastolicList, range:  [60,85,100], label: "舒张压")
         self.setupPieChart(pieData: pieData, label: "舒张压")
     }
     
     func systolic() {
-        let listData = self.demoData(range: 70, offset: 80)
-        let lineData = self.createLineData(listData: listData, chartName: "收缩压")
-        self.setupLineChart(lineData: lineData, limitLine: 140.0, maxValue: 190.0, minValue: 90.0)
+        if self.systolicList.count == 0 {
+            self.systolicList = self.demoData(range: 70, offset: 80)
+        }
+        let lineData = self.createLineData(listData: self.systolicList, chartName: "收缩压")
+        self.setupLineChart(lineData: lineData, limitLine: 140.0, maxValue: 190.0, minValue: 70.0)
 
-        let pieData = self.createPieData(listData: listData, range: [90,110,140], label: "收缩压")
+        let pieData = self.createPieData(listData: self.systolicList, range: [90,110,140], label: "收缩压")
         self.setupPieChart(pieData: pieData, label: "收缩压")
     }
     
